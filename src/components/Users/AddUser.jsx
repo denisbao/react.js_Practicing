@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 import style from './AddUser.module.css'
 
-export function AddUser() {
+export function AddUser(props) {
   const [enteredUsername, setEnteredUsername] = useState('')
   const [enteredAge, setEnteredAge] = useState('')
 
@@ -23,6 +23,7 @@ export function AddUser() {
     if (+enteredAge < 1) {
       return
     }
+    props.onAddUser(enteredUsername, enteredAge)
     setEnteredAge('')
     setEnteredUsername('')
   }
