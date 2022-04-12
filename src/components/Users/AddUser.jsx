@@ -1,3 +1,8 @@
+import { Card } from "../UI/Card"
+
+import style from './AddUser.module.css'
+
+
 export function AddUser() {
 
   function addUserHandler(event) {
@@ -5,15 +10,16 @@ export function AddUser() {
   }
 
   return (
-    <form onSubmit={addUserHandler}>
+    <Card className={style.input}>
+      <form onSubmit={addUserHandler}>
+        <label htmlFor="username">Username</label>
+        <input id="username" type="text" />
 
-      <label htmlFor="username">Username</label>
-      <input id="username" type="text" />
+        <label htmlFor="age">Age</label>
+        <input id="age" type="number" />
 
-      <label htmlFor="age">Age</label>
-      <input id="age" type="number" />
-      
-      <button type="submit">Add User</button>
-    </form>
+        <button type="submit">Add User</button>
+      </form>
+    </Card>
   )
 }
