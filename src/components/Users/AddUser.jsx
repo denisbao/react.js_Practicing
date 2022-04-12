@@ -1,4 +1,5 @@
 import { Card } from "../UI/Card"
+import { Button } from '../UI/Button';
 
 import style from './AddUser.module.css'
 
@@ -18,7 +19,7 @@ export function AddUser() {
         <label htmlFor="age">Age</label>
         <input id="age" type="number" />
 
-        <button type="submit">Add User</button>
+        <Button type="submit">Add User</Button>
       </form>
     </Card>
   )
